@@ -1,7 +1,8 @@
 //12/05/22 03:16PM Start Time
+// 12/05/22 04:15PM End Time
 
 function getComputerChoice() {
-    let choices = ['Rock' , 'Paper' , 'Scissors'];
+    let choices = ['ROCK' , 'PAPER' , 'SCISSORS'];
     let choice = choices[Math.floor(Math.random()*choices.length)];
     return choice;
 }
@@ -9,16 +10,16 @@ function getComputerChoice() {
 console.log(getComputerChoice());
 
 function playGame(playerSelection , computerSelection){ 
-     computerSelection = getComputerChoice();
+    computerSelection = getComputerChoice();
+    playerSelection = playerSelection.toUpperCase();
 
-    if (playerSelection === 'Rock' && computerSelection === 'Rock' || playerSelection === 'Paper' && computerSelection === 'Paper' || playerSelection === 'Scissors' && computerSelection === 'Scissors'){
+    if (playerSelection === computerSelection){
         return 'IT\'s A DRAW... What are you doing?!';
 
-    }else if (playerSelection === 'Scissors' && computerSelection === 'Paper' || playerSelection === 'Paper' && computerSelection === 'Rock' || playerSelection === 'Rock' && computerSelection === 'Rock') {
+    }else if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER' || playerSelection === 'PAPER' && computerSelection === 'ROCK' || playerSelection === 'ROCK' && computerSelection === 'SCISSORS') {
         return 'YOU WIN!!! YOU\'RE A WEINER!';
 
     }else{
         return 'YOU LOSE! BETTER LUCK NEXT TIME!!';
     }
 }
-console.log(playGame('Rock'))
