@@ -23,18 +23,31 @@ body {
     border: 4px solid black;
     display: flex;
     flex-direction: column;
+    height: 150px;
 }
 
 #imageChoiceContainer {
     border: 4px solid black;
     display: flex;
     justify-content:space-around;
+    height: 200px;
+    
 }
+
+.imageChoiceContainerPlayer{
+    background-color: green;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width:100px;
+    height:100px;
+  }
 
 #scoreContainer {
     border: 4px solid black;
     display: flex;
     justify-content:space-evenly;
+    height: 200px;
 }
 
 #btnContainer {
@@ -52,6 +65,10 @@ body {
 }
 
 #btnContainer > *:hover{
+    background-color: rgb(168, 134, 134);
+}
+
+#btnContainer > *:focus{
     background-color: rgb(168, 134, 134);
 }
 
