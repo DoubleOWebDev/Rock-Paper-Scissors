@@ -42,3 +42,18 @@ const game = (round) =>{
     return 'IT IS A DRAW'
   }
 }
+
+
+/*ROCK PAPER SCISSORS PSUEDO CODE
+    Creating UI:
+       Create title header
+        Create h2 space for results
+        {Create space to display results of both   players choices}
+        Display score
+        Box of images to put game choices 
+    
+    Connecting JS to DOM:
+        {Add eventlistener and function to each picture}
+          Display result in h2 when clicked
+          Display score in h2 when clicked
+*/
