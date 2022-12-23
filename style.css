@@ -1,0 +1,65 @@
+/*UNIVERSAL STYLING*/
+
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(111, 110, 110);
+    height: 100vh;
+}
+
+/*UNIVERSAL STYLING*/
+
+/**/
+.results {
+    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+#imageChoiceContainer {
+    border: 4px solid black;
+    display: flex;
+    justify-content:space-around;
+}
+
+#scoreContainer {
+    border: 4px solid black;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+#btnContainer {
+    border: 4px solid black;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+#btnContainer > *{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+#btnContainer > *:hover{
+    background-color: rgb(168, 134, 134);
+}
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
