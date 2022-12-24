@@ -15,38 +15,52 @@
           Display score in h2 when clicked
 */
 //Add eventlistener to each picture
-const btnRock = document.querySelector('.btnRock').addEventListener('click', () =>{
-  document.querySelector('.imageChoiceContainerPlayer').textContent = '🪨yesyesysye';
-});
 
-//display your choice in DOM
+/*   ************************  ************** */
 
-
-const btnPaper = document.querySelector('.btnPaper').addEventListener('click', () =>{
-  document.querySelector('.imageChoiceContainerPlayer').textContent = '🧻';
-});
-
-
-
-const btnScissors = document.querySelector('.btnScissors').addEventListener('click', () =>{
-  document.querySelector('.imageChoiceContainerPlayer').textContent = '✂️';
-});
-
+let rock = '🪨';
+let scissors = '✂️';
+let paper = '🧻';
+const choices = [rock, paper, scissors];
 
 function getComputerChoice() {
-  let choices = ['ROCK' , 'PAPER' , 'SCISSORS'];
   let choice = choices[Math.floor(Math.random()*choices.length)];
+  if(choice === rock) {
+    return rock
+  }else if (choice === paper){
+    return paper
+  }else {
+    return scissors
+  }
   return choice;
 }
 
+const btnPlayerRock = document.querySelector('.btnRock').addEventListener('click', () =>{
+  document.querySelector('.imageChoiceContainerPlayer').textContent = '🪨';
+   document.querySelector('.imageChoiceContainerComputer').textContent = getComputerChoice();
+});
+
+const btnPlayerPaper = document.querySelector('.btnPaper').addEventListener('click', () =>{
+  document.querySelector('.imageChoiceContainerPlayer').textContent = '🧻'; document.querySelector('.imageChoiceContainerComputer').textContent = getComputerChoice();
+});
+
+const btnPlayerScissors = document.querySelector('.btnScissors').addEventListener('click', () =>{ 
+  document.querySelector('.imageChoiceContainerPlayer').textContent = '✂️';                  document.querySelector('.imageChoiceContainerComputer').textContent = getComputerChoice();
+});
+
+/*
+const document.querySelector(#playerOne).addEventListener('click',()=>{
+
+})
+*/
 let playerScore = 0
 let computerScore = 0
 
 let  playRound = (playerSelection , computerSelection) =>{ 
-
-  let weaponChoice = playerSelection;
+  
+  playerSelection = btnRock
   computerSelection = getComputerChoice();
-  playerSelection = weaponChoice.trim().toUpperCase();
+  //playerSelection = weaponChoice.trim().toUpperCase();
 
   if (playerSelection === computerSelection){
       return 'IT\'s A DRAW... What are you doing?!';        
@@ -60,8 +74,6 @@ let  playRound = (playerSelection , computerSelection) =>{
       return 'YOU LOSE! BETTER LUCK NEXT TIME!!';
   }
 }
-
-
 
 const game = (round) =>{
   for (let i = 0; i < round; i++){
@@ -83,7 +95,8 @@ const game = (round) =>{
 //Add eventlistener to each picture
 /*In our UI, the player should be able to play the game by clicking on buttons rather than typing their answer in a prompt.
 For now, remove the logic that plays exactly five rounds.
-Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function with the correct playerSelection every time a button is clicked. (you can keep the console.logs for this step)
+Create three buttons, one for each selection. 
+Add an event listener to the buttons that call your playRound function with the correct playerSelection every time a button is clicked. (you can keep the console.logs for this step)
 Add a div for displaying results and change all of your console.logs into DOM methods.
 Display the running score, and announce a winner of the game once one player reaches 5 points.
 You will likely have to refactor (rework/rewrite) your original code to make it work for this. That’s OK! Reworking old code is an important part of a programmer’s life.*/

@@ -34,13 +34,15 @@ body {
     
 }
 
-.imageChoiceContainerPlayer{
-    background-color: green;
+.imageChoiceContainerPlayer,
+.imageChoiceContainerComputer{
+    background-color: brown;
     display: flex;
     justify-content:center;
     align-items:center;
     width:100px;
     height:100px;
+    border-radius: 20%;
   }
 
 #scoreContainer {
